@@ -55,7 +55,11 @@ def makeBoard(n):
         cv2.line(board, (0, k), (screensize, k), (0, 0, 0), 4, cv2.LINE_AA)
 
 
-n = int(input("input number of size : "))
+n = int(input("Input number of size(below 20) : "))
+if n > 20:
+    ctypes.windll.user32.MessageBoxW(0, "please input number below 20", "error", 16)
+    sys.exit(0)
+
 arr = [-1] * n
 queenSize = int(screensize / (n + 1)), int(screensize / (n + 1))
 
