@@ -54,7 +54,7 @@ def makeBoard(n):
         cv2.line(board, (0, k), (screensize, k), (0, 0, 0), 4, cv2.LINE_AA)
 
 
-n = int(input())
+n = int(input("input number of size"))
 arr = [-1] * n
 queenSize = int(screensize / (n + 1)), int(screensize / (n + 1))
 
